@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <!-- Font Awesome Icons -->
+  <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+
+  <!-- Open Sans Font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,900' rel='stylesheet' type='text/css'>
+
+    <title>YouTube</title>
+</head>
+<body ng-app="Youtube" ng-controller="YoutubeController" class="body">
+
+        <nav id="sidebar-wrapper"> 
+                <ul class="sidebar">
+                  <a href="#" id="menu-close" class="pull-right toggle"><img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/X.png"></a>
+                  <ul>
+                    <li class="title">Menu</li>
+                    <li><a href="#"><i class="fa fa-eye"></i> What to watch</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> My Channel</a></li>
+                    <li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
+                    <li><a href="#"><i class="fa fa-repeat"></i> Watch Later</a></li>
+                  </ul>
+                  <ul id="playlist">
+                    <li class="title">Playlists</li>
+                    <li><a href="#"><i class="fa fa-headphones"></i> Best of David Guetta <p>David Guetta</p></a></li>
+                    <li><a href="#"><i class="fa fa-film"></i> Favourite Videos <p>Check your favourite videos</p></a></li>
+                    <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Liked Videos <p>Reach all the videos you like</p></a></li>
+                  </ul>
+                  <ul id="subs">
+                    <li class="title">Subscriptions</li>
+                    <li><a href="#"><img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/shoes.png"> NikeShoes</a></li>
+                    <li><a href="#"><img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/shakira.png"> ShakiraVEVO</a></li>
+                    <li><a href="#"><img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/nike.png"> NikeFootball</a></li>
+                  </ul>
+                </ul> 
+              </nav>
+
+               <header>
+                    <div class="container-fluid">
+                      <div class="row">
+                        
+                        <div class="col-md-2">
+                          <a href="#"><img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/logo.png" class="logo"></a>
+                          <a href="#" id="menu-toggle">
+                            <img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/menu.png">
+                          </a>
+                        </div>
+                
+                        <div class="col-md-5">
+                          <form><input ng-model="search" placeholder="Type to search..." type="text"></form>
+                        </div>
+                
+                        <div class="col-md-5">
+                          <ul id="user-info">
+                            <li><a href="#/search" class="button" ng-click="searchInput(search)">Search</a></li>
+                            <li>
+                              <ul class="notifications">
+                                <li><i class="fa fa-envelope"></i><span>1</span></li>
+                                <li><i class="fa fa-bell"></i><span>3</span></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <img src="https://raw.githubusercontent.com/xaganic/bootstrap-youtube-template/master/bootstrap-youtube-template/images/profile.png">
+                              <div>
+                                <p class="username">John Doe</p>
+                                <p>9 Subscribers</p>
+                                <a href="#">Log out</a>
+                              </div>
+                            </li>
+                          </ul> 
+                        </div> 
+                
+                      </div> 
+                    </div> 
+                  </header> 
+                
+                  <hr> 
+        
+                 
+    <div class="ng-view container">
+
+        <!-- Search: <input type="text" ng-model="search">
+        
+        <Button ng-click="searchInput(search)"> Search</Button><br><br> -->
+
+        <!-- <h1 ng-if="totalResults> 0">{{totalResults}} Results found</h1>
+
+       <div>
+        
+      <div class=" row col-md-12" ng-repeat="item in results">
+               
+               <a href='https://www.youtube.com/watch?v={{item.id.videoId}}&key=AIzaSyC099Mu0ijkmJc-LufkGYdFAlEgtKtjbH4'><img ng-src=" {{item.snippet.thumbnails.medium.url}}" alt="image not loaded"><br></a>
+                <h5> {{item.snippet.channelTitle}}</h5>
+                <b>Title:</b> <h5> {{item.snippet.title}}</h5>
+                <b>VideoID</b>: {{item.id.videoId}}<br>
+               
+               <b>Description:</b> {{item.snippet.description}}
+               <br> <br>
+          </div> 
+
+
+          <div>
+
+          </div>
+
+       </div> -->
+    </div>
+    
+</body>
+<script src="angular.js"></script>
+<script src="/node_modules/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>
+<script src="/src/module/main.module.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="/src/routes/route.js"></script>
+<script src="src/controllers/main.controller.js"></script>
+<script src="src/controllers/SearchPage.controller.js"></script>
+
+</html>

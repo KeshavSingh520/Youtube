@@ -1,0 +1,24 @@
+<h1 ng-if="totalResults> 0">{{totalResults}} Results found</h1>
+
+       <div>
+        
+        <!-- msg from main controller: {{receivedResults}} -->
+      <div class=" row col-md-12" ng-repeat="item in results">
+               
+               <a href='https://www.youtube.com/watch?v={{item.id.videoId}}&key=AIzaSyC099Mu0ijkmJc-LufkGYdFAlEgtKtjbH4'><img ng-src=" {{item.snippet.thumbnails.medium.url}}" alt="image not loaded"><br></a>
+               <a href='https://www.youtube.com/watch?v={{item.id.videoId}}&key=AIzaSyC099Mu0ijkmJc-LufkGYdFAlEgtKtjbH4''> <h5> {{item.snippet.channelTitle}}</h5></a>
+                <b>Title:</b> <h5> {{item.snippet.title}}</h5>
+                <b>VideoID</b>: {{item.id.videoId}}<br>
+               
+               <b>Description:</b> {{item.snippet.description}}
+               <br> <br>
+          </div> 
+
+
+          <div>
+
+          </div>
+
+       </div>
+
+      
